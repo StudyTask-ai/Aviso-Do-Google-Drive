@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização do StudyTask</title>
+    <style>
+        body {
+            background-color: #8533f1;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        #messageBox {
+            background-color: #8533f1;
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: 20px auto;
+            display: none;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        #closeButton {
+            background-color: #ffffff;
+            color: #8533f1;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #studyTaskIcon {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        ul {
+            text-align: left;
+            display: inline-block;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="messageBox">
+        <img id="studyTaskIcon" src="https://raw.githubusercontent.com/Luanzinh0fc/Luanzinh0fc-Banco-de-dados-p-blicos/main/1000008714-removebg.png" alt="Ícone do StudyTask">
+        <h2>Atualização do StudyTask</h2>
+        <p>Prezado usuário,</p>
+        <p>Informamos que realizamos uma atualização no aplicativo StudyTask com os seguintes objetivos:</p>
+        <ul>
+            <li>Corrigir diversos erros e problemas identificados;</li>
+            <li>Aprimorar a segurança através de uma nova técnica de download, eliminando o armazenamento no Google Drive;</li>
+            <li>Implementar uma camada adicional de criptografia para proteger seus dados.</li>
+        </ul>
+        <p>Assista ao vídeo abaixo para entender melhor as razões dessas mudanças:</p>
+        <video controls>
+            <source src="https://raw.githubusercontent.com/StudyTask-ai/V-deo-Do-Google-Drive-/main/Cuidado%20com%20os%20seus%20arquivos%20no%20Google%20Drive_HD.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeo.
+        </video>
+        <p>Estamos cientes de que o fato de o aplicativo não estar disponível na Play Store pode ser inconveniente, visto que muitos usuários estão realizando o download através de navegadores. No entanto, garantimos que nosso aplicativo não contém malware ou código malicioso. Utilizamos o Android Studio para assegurar a segurança contínua para todos os estudantes.</p>
+        <p>Estamos corrigindo os botões de download para evitar a aparição de códigos binários. Pedimos sinceras desculpas por qualquer inconveniente causado por esta atualização. Nosso compromisso é garantir a sua segurança.</p>
+        <button id="closeButton">Fechar</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verifica se a mensagem já foi mostrada
+            if (!localStorage.getItem('messageShown')) {
+                document.getElementById('messageBox').style.display = 'block';
+            }
+
+            // Fecha a mensagem e armazena a informação de que já foi mostrada
+            document.getElementById('closeButton').addEventListener('click', function() {
+                document.getElementById('messageBox').style.display = 'none';
+                localStorage.setItem('messageShown', 'true');
+            });
+        });
+    </script>
+</body>
+</html>
